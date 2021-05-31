@@ -9,8 +9,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 31 May 2021 13:13:46 GMT</pubDate>
+    <pubDate>Mon, 31 May 2021 14:18:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hi</title>
+      <link>http://blog.likweitan.tech/posts/d8932aac/</link>
+      <guid>http://blog.likweitan.tech/posts/d8932aac/</guid>
+      <pubDate>Mon, 31 May 2021 14:18:39 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+        
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content:encoded>
+      
+      <comments>http://blog.likweitan.tech/posts/d8932aac/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Apache Pig: Windows Installation 安装</title>
