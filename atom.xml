@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hyun</title>
+  <title>Codes</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://likweitan.github.io/"/>
+  <link href="http://blog.likweitan.tech/"/>
   <updated>2021-05-31T13:13:46.719Z</updated>
-  <id>http://likweitan.github.io/</id>
+  <id>http://blog.likweitan.tech/</id>
   
   <author>
     <name>likweitan</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Apache Pig: Windows Installation 安装</title>
-    <link href="http://likweitan.github.io/posts/60b0d0b4/"/>
-    <id>http://likweitan.github.io/posts/60b0d0b4/</id>
+    <link href="http://blog.likweitan.tech/posts/60b0d0b4/"/>
+    <id>http://blog.likweitan.tech/posts/60b0d0b4/</id>
     <published>2020-10-14T09:55:00.000Z</published>
     <updated>2021-05-31T13:13:46.719Z</updated>
     
@@ -32,19 +32,19 @@
     </summary>
     
     
-      <category term="Big Data" scheme="http://likweitan.github.io/categories/Big-Data/"/>
+      <category term="Big Data" scheme="http://blog.likweitan.tech/categories/Big-Data/"/>
     
-      <category term="Hadoop" scheme="http://likweitan.github.io/categories/Big-Data/Hadoop/"/>
+      <category term="Hadoop" scheme="http://blog.likweitan.tech/categories/Big-Data/Hadoop/"/>
     
     
-      <category term="hadoop" scheme="http://likweitan.github.io/tags/hadoop/"/>
+      <category term="hadoop" scheme="http://blog.likweitan.tech/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>Hadoop: Windows Installation 安装</title>
-    <link href="http://likweitan.github.io/posts/55b85722/"/>
-    <id>http://likweitan.github.io/posts/55b85722/</id>
+    <link href="http://blog.likweitan.tech/posts/55b85722/"/>
+    <id>http://blog.likweitan.tech/posts/55b85722/</id>
     <published>2020-08-19T08:32:04.000Z</published>
     <updated>2021-05-31T13:13:46.719Z</updated>
     
@@ -57,19 +57,19 @@
     </summary>
     
     
-      <category term="Big Data" scheme="http://likweitan.github.io/categories/Big-Data/"/>
+      <category term="Big Data" scheme="http://blog.likweitan.tech/categories/Big-Data/"/>
     
-      <category term="Hadoop" scheme="http://likweitan.github.io/categories/Big-Data/Hadoop/"/>
+      <category term="Hadoop" scheme="http://blog.likweitan.tech/categories/Big-Data/Hadoop/"/>
     
     
-      <category term="hadoop" scheme="http://likweitan.github.io/tags/hadoop/"/>
+      <category term="hadoop" scheme="http://blog.likweitan.tech/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>React: Freecodecamp</title>
-    <link href="http://likweitan.github.io/posts/aef13551/"/>
-    <id>http://likweitan.github.io/posts/aef13551/</id>
+    <link href="http://blog.likweitan.tech/posts/aef13551/"/>
+    <id>http://blog.likweitan.tech/posts/aef13551/</id>
     <published>2020-05-08T02:05:01.000Z</published>
     <updated>2021-05-31T13:13:46.723Z</updated>
     
@@ -85,17 +85,17 @@
     </summary>
     
     
-      <category term="Front End Libraries" scheme="http://likweitan.github.io/categories/Front-End-Libraries/"/>
+      <category term="Front End Libraries" scheme="http://blog.likweitan.tech/categories/Front-End-Libraries/"/>
     
-      <category term="React" scheme="http://likweitan.github.io/categories/Front-End-Libraries/React/"/>
+      <category term="React" scheme="http://blog.likweitan.tech/categories/Front-End-Libraries/React/"/>
     
     
   </entry>
   
   <entry>
     <title>Python: Lists</title>
-    <link href="http://likweitan.github.io/posts/7117eb09/"/>
-    <id>http://likweitan.github.io/posts/7117eb09/</id>
+    <link href="http://blog.likweitan.tech/posts/7117eb09/"/>
+    <id>http://blog.likweitan.tech/posts/7117eb09/</id>
     <published>2020-05-07T14:21:38.000Z</published>
     <updated>2021-05-31T13:13:46.723Z</updated>
     
@@ -116,8 +116,8 @@
   
   <entry>
     <title>Pandas: Index, Select, Assign</title>
-    <link href="http://likweitan.github.io/posts/3cc6066f/"/>
-    <id>http://likweitan.github.io/posts/3cc6066f/</id>
+    <link href="http://blog.likweitan.tech/posts/3cc6066f/"/>
+    <id>http://blog.likweitan.tech/posts/3cc6066f/</id>
     <published>2020-05-07T09:36:12.000Z</published>
     <updated>2021-05-31T13:13:46.720Z</updated>
     
@@ -138,8 +138,8 @@
   
   <entry>
     <title>Pandas: Create, Read, Write</title>
-    <link href="http://likweitan.github.io/posts/4337453/"/>
-    <id>http://likweitan.github.io/posts/4337453/</id>
+    <link href="http://blog.likweitan.tech/posts/4337453/"/>
+    <id>http://blog.likweitan.tech/posts/4337453/</id>
     <published>2020-05-07T08:16:29.000Z</published>
     <updated>2021-05-31T13:13:46.720Z</updated>
     
@@ -160,8 +160,8 @@
   
   <entry>
     <title>Python: Booleans and Conditionals</title>
-    <link href="http://likweitan.github.io/posts/48128415/"/>
-    <id>http://likweitan.github.io/posts/48128415/</id>
+    <link href="http://blog.likweitan.tech/posts/48128415/"/>
+    <id>http://blog.likweitan.tech/posts/48128415/</id>
     <published>2020-05-07T07:25:51.000Z</published>
     <updated>2021-05-31T13:13:46.722Z</updated>
     
@@ -182,8 +182,8 @@
   
   <entry>
     <title>Python: Functions 功能</title>
-    <link href="http://likweitan.github.io/posts/c6d61a2c/"/>
-    <id>http://likweitan.github.io/posts/c6d61a2c/</id>
+    <link href="http://blog.likweitan.tech/posts/c6d61a2c/"/>
+    <id>http://blog.likweitan.tech/posts/c6d61a2c/</id>
     <published>2020-05-07T03:22:15.000Z</published>
     <updated>2021-05-31T13:13:46.722Z</updated>
     
@@ -199,19 +199,19 @@
     </summary>
     
     
-      <category term="programming" scheme="http://likweitan.github.io/categories/programming/"/>
+      <category term="programming" scheme="http://blog.likweitan.tech/categories/programming/"/>
     
-      <category term="python" scheme="http://likweitan.github.io/categories/programming/python/"/>
+      <category term="python" scheme="http://blog.likweitan.tech/categories/programming/python/"/>
     
     
-      <category term="python" scheme="http://likweitan.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.likweitan.tech/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>源代码储存</title>
-    <link href="http://likweitan.github.io/posts/b5b6b64e/"/>
-    <id>http://likweitan.github.io/posts/b5b6b64e/</id>
+    <link href="http://blog.likweitan.tech/posts/b5b6b64e/"/>
+    <id>http://blog.likweitan.tech/posts/b5b6b64e/</id>
     <published>2020-05-06T14:52:39.000Z</published>
     <updated>2021-05-31T13:13:46.719Z</updated>
     
@@ -232,8 +232,8 @@
   
   <entry>
     <title>Python: Hello 你好</title>
-    <link href="http://likweitan.github.io/posts/ccc442ff/"/>
-    <id>http://likweitan.github.io/posts/ccc442ff/</id>
+    <link href="http://blog.likweitan.tech/posts/ccc442ff/"/>
+    <id>http://blog.likweitan.tech/posts/ccc442ff/</id>
     <published>2020-05-06T14:12:31.000Z</published>
     <updated>2021-05-31T13:13:46.722Z</updated>
     
@@ -249,19 +249,19 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://likweitan.github.io/categories/Programming/"/>
+      <category term="Programming" scheme="http://blog.likweitan.tech/categories/Programming/"/>
     
-      <category term="Python" scheme="http://likweitan.github.io/categories/Programming/Python/"/>
+      <category term="Python" scheme="http://blog.likweitan.tech/categories/Programming/Python/"/>
     
     
-      <category term="python" scheme="http://likweitan.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.likweitan.tech/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>React: The Basics</title>
-    <link href="http://likweitan.github.io/posts/420a3e53/"/>
-    <id>http://likweitan.github.io/posts/420a3e53/</id>
+    <link href="http://blog.likweitan.tech/posts/420a3e53/"/>
+    <id>http://blog.likweitan.tech/posts/420a3e53/</id>
     <published>2020-04-24T15:50:52.000Z</published>
     <updated>2021-05-31T13:13:46.724Z</updated>
     
@@ -278,14 +278,14 @@
     
     
     
-      <category term="react" scheme="http://likweitan.github.io/tags/react/"/>
+      <category term="react" scheme="http://blog.likweitan.tech/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>Simulation Case Study 模拟案例研究</title>
-    <link href="http://likweitan.github.io/posts/50a7ff60/"/>
-    <id>http://likweitan.github.io/posts/50a7ff60/</id>
+    <link href="http://blog.likweitan.tech/posts/50a7ff60/"/>
+    <id>http://blog.likweitan.tech/posts/50a7ff60/</id>
     <published>2020-04-20T13:03:33.000Z</published>
     <updated>2021-05-31T13:13:46.724Z</updated>
     
@@ -306,8 +306,8 @@
   
   <entry>
     <title>PHP: Lab Test 测验</title>
-    <link href="http://likweitan.github.io/posts/1b584c11/"/>
-    <id>http://likweitan.github.io/posts/1b584c11/</id>
+    <link href="http://blog.likweitan.tech/posts/1b584c11/"/>
+    <id>http://blog.likweitan.tech/posts/1b584c11/</id>
     <published>2020-04-20T10:41:34.000Z</published>
     <updated>2021-05-31T13:13:46.721Z</updated>
     
@@ -323,19 +323,19 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://likweitan.github.io/categories/Programming/"/>
+      <category term="Programming" scheme="http://blog.likweitan.tech/categories/Programming/"/>
     
-      <category term="PHP" scheme="http://likweitan.github.io/categories/Programming/PHP/"/>
+      <category term="PHP" scheme="http://blog.likweitan.tech/categories/Programming/PHP/"/>
     
     
-      <category term="php" scheme="http://likweitan.github.io/tags/php/"/>
+      <category term="php" scheme="http://blog.likweitan.tech/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>PHP: Array 矩阵</title>
-    <link href="http://likweitan.github.io/posts/9ec957eb/"/>
-    <id>http://likweitan.github.io/posts/9ec957eb/</id>
+    <link href="http://blog.likweitan.tech/posts/9ec957eb/"/>
+    <id>http://blog.likweitan.tech/posts/9ec957eb/</id>
     <published>2020-04-19T13:36:08.000Z</published>
     <updated>2021-05-31T13:13:46.721Z</updated>
     
@@ -352,14 +352,14 @@
     
     
     
-      <category term="php" scheme="http://likweitan.github.io/tags/php/"/>
+      <category term="php" scheme="http://blog.likweitan.tech/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>PHP: Basic String Manipulation 基本的字符串操作</title>
-    <link href="http://likweitan.github.io/posts/587032ad/"/>
-    <id>http://likweitan.github.io/posts/587032ad/</id>
+    <link href="http://blog.likweitan.tech/posts/587032ad/"/>
+    <id>http://blog.likweitan.tech/posts/587032ad/</id>
     <published>2020-02-17T13:59:25.000Z</published>
     <updated>2021-05-31T13:13:46.721Z</updated>
     
@@ -375,19 +375,19 @@
     </summary>
     
     
-      <category term="Programming" scheme="http://likweitan.github.io/categories/Programming/"/>
+      <category term="Programming" scheme="http://blog.likweitan.tech/categories/Programming/"/>
     
-      <category term="PHP" scheme="http://likweitan.github.io/categories/Programming/PHP/"/>
+      <category term="PHP" scheme="http://blog.likweitan.tech/categories/Programming/PHP/"/>
     
     
-      <category term="php" scheme="http://likweitan.github.io/tags/php/"/>
+      <category term="php" scheme="http://blog.likweitan.tech/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>ServerJars: Open a Minecarft Server 教你开一个Minecraft服务器</title>
-    <link href="http://likweitan.github.io/posts/97bc2bbe/"/>
-    <id>http://likweitan.github.io/posts/97bc2bbe/</id>
+    <link href="http://blog.likweitan.tech/posts/97bc2bbe/"/>
+    <id>http://blog.likweitan.tech/posts/97bc2bbe/</id>
     <published>2020-02-17T13:45:24.000Z</published>
     <updated>2021-05-31T13:13:46.720Z</updated>
     
@@ -403,19 +403,19 @@
     </summary>
     
     
-      <category term="Server" scheme="http://likweitan.github.io/categories/Server/"/>
+      <category term="Server" scheme="http://blog.likweitan.tech/categories/Server/"/>
     
-      <category term="Minecraft" scheme="http://likweitan.github.io/categories/Server/Minecraft/"/>
+      <category term="Minecraft" scheme="http://blog.likweitan.tech/categories/Server/Minecraft/"/>
     
     
-      <category term="minecraft" scheme="http://likweitan.github.io/tags/minecraft/"/>
+      <category term="minecraft" scheme="http://blog.likweitan.tech/tags/minecraft/"/>
     
   </entry>
   
   <entry>
     <title>Hexo + Github: Build your personal blog 建立一个属于你的部落格</title>
-    <link href="http://likweitan.github.io/posts/9fc84f43/"/>
-    <id>http://likweitan.github.io/posts/9fc84f43/</id>
+    <link href="http://blog.likweitan.tech/posts/9fc84f43/"/>
+    <id>http://blog.likweitan.tech/posts/9fc84f43/</id>
     <published>2020-02-14T06:51:37.000Z</published>
     <updated>2021-05-31T13:13:46.718Z</updated>
     
@@ -428,12 +428,12 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://likweitan.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="http://blog.likweitan.tech/categories/Linux/"/>
     
-      <category term="Hexo" scheme="http://likweitan.github.io/categories/Linux/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.likweitan.tech/categories/Linux/Hexo/"/>
     
     
-      <category term="hexo" scheme="http://likweitan.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="http://blog.likweitan.tech/tags/hexo/"/>
     
   </entry>
   
