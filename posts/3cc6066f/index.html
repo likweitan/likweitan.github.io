@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pandas: Index, Select, Assign | Codes</title><meta name="description" content="1234import pandas as pdreviews &#x3D; pd.read_csv(&quot;input&#x2F;wine-reviews&#x2F;winemag-data-130k-v2.csv&quot;, index_col&#x3D;0)pd.set_option(&quot;display.max_rows&quot;, 5)  Look at an overview of your data by running the following"><meta name="author" content="likweitan"><meta name="copyright" content="likweitan"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.likweitan.tech/posts/3cc6066f/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="msvalidate.01" content="88c6623222814653bc86abd55f2df90b"/><meta property="og:type" content="article"><meta property="og:title" content="Pandas: Index, Select, Assign"><meta property="og:url" content="http://blog.likweitan.tech/posts/3cc6066f/"><meta property="og:site_name" content="Codes"><meta property="og:description" content="1234import pandas as pdreviews &#x3D; pd.read_csv(&quot;input&#x2F;wine-reviews&#x2F;winemag-data-130k-v2.csv&quot;, index_col&#x3D;0)pd.set_option(&quot;display.max_rows&quot;, 5)  Look at an overview of your data by running the following"><meta property="og:image" content="http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png"><meta property="article:published_time" content="2020-05-07T09:36:12.000Z"><meta property="article:modified_time" content="2021-05-31T13:13:46.720Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pandas: Index, Select, Assign | Codes</title><meta name="description" content="1234import pandas as pdreviews &#x3D; pd.read_csv(&quot;input&#x2F;wine-reviews&#x2F;winemag-data-130k-v2.csv&quot;, index_col&#x3D;0)pd.set_option(&quot;display.max_rows&quot;, 5)  Look at an overview of your data by ru"><meta name="author" content="likweitan"><meta name="copyright" content="likweitan"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.likweitan.tech/posts/3cc6066f/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="msvalidate.01" content="88c6623222814653bc86abd55f2df90b"/><meta property="og:type" content="article"><meta property="og:title" content="Pandas: Index, Select, Assign"><meta property="og:url" content="http://blog.likweitan.tech/posts/3cc6066f/"><meta property="og:site_name" content="Codes"><meta property="og:description" content="1234import pandas as pdreviews &#x3D; pd.read_csv(&quot;input&#x2F;wine-reviews&#x2F;winemag-data-130k-v2.csv&quot;, index_col&#x3D;0)pd.set_option(&quot;display.max_rows&quot;, 5)  Look at an overview of your data by ru"><meta property="og:image" content="http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png"><meta property="article:published_time" content="2020-05-07T09:36:12.000Z"><meta property="article:modified_time" content="2021-05-31T13:13:46.720Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
   document.documentElement.setAttribute('data-theme', 'dark')
   if (document.querySelector('meta[name="theme-color"]') !== null) {
     document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
@@ -104,7 +104,7 @@ gtag('config', 'UA-80462825-2');
 }
 </style></noscript><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Codes" type="application/atom+xml">
 <link rel="alternate" href="/rss2.xml" title="Codes" type="application/rss+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9.</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Codes</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Pandas: Index, Select, Assign</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-05-07T09:36:12.000Z" title="發表於 2020-05-07 17:36:12">2020-05-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-05-31T13:13:46.720Z" title="更新於 2021-05-31 21:13:46">2021-05-31</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">reviews = pd.read_csv(<span class="string">"input/wine-reviews/winemag-data-130k-v2.csv"</span>, index_col=<span class="number">0</span>)</span><br><span class="line">pd.set_option(<span class="string">"display.max_rows"</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9.</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Codes</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Pandas: Index, Select, Assign</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-05-07T09:36:12.000Z" title="發表於 2020-05-07 17:36:12">2020-05-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-05-31T13:13:46.720Z" title="更新於 2021-05-31 21:13:46">2021-05-31</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">reviews = pd.read_csv(<span class="string">&quot;input/wine-reviews/winemag-data-130k-v2.csv&quot;</span>, index_col=<span class="number">0</span>)</span><br><span class="line">pd.set_option(<span class="string">&quot;display.max_rows&quot;</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Look at an overview of your data by running the following line.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reviews.head()</span><br></pre></td></tr></table></figure>
@@ -115,13 +115,15 @@ gtag('config', 'UA-80462825-2');
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -234,10 +236,14 @@ gtag('config', 'UA-80462825-2');
                                 ...
 129969    A dry style of Pinot Gris, this is crisp with ...
 129970    Big, rich and off-dry, this is powered by inte...
-Name: description, Length: 129971, dtype: object</code></pre><h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>Select the first value from the description column of <code>reviews</code>, assigning it to variable <code>first_description</code>.</p>
+Name: description, Length: 129971, dtype: object
+</code></pre>
+<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>Select the first value from the description column of <code>reviews</code>, assigning it to variable <code>first_description</code>.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first_description = reviews.description.iloc[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">first_description</span><br></pre></td></tr></table></figure>
 
-<pre><code>&quot;Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn&apos;t overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.&quot;</code></pre><p>first_description = reviews.description.iloc[0]<br>Note that while this is the preferred way to obtain the entry in the DataFrame, many other options will return a valid result, such as reviews.description.loc[0], reviews.description[0], and more!</p>
+<pre><code>&quot;Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn&#39;t overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.&quot;
+</code></pre>
+<p>first_description = reviews.description.iloc[0]<br>Note that while this is the preferred way to obtain the entry in the DataFrame, many other options will return a valid result, such as reviews.description.loc[0], reviews.description[0], and more!</p>
 <h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>Select the first row of data (the first record) from <code>reviews</code>, assigning it to the variable <code>first_row</code>.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first_row = reviews.iloc[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">first_row</span><br></pre></td></tr></table></figure>
 
@@ -246,7 +252,9 @@ description    Aromas include tropical fruit, broom, brimston...
                                      ...
 variety                                              White Blend
 winery                                                   Nicosia
-Name: 0, Length: 13, dtype: object</code></pre><h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>Select the first 10 values from the <code>description</code> column in <code>reviews</code>, assigning the result to variable <code>first_descriptions</code>.</p>
+Name: 0, Length: 13, dtype: object
+</code></pre>
+<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>Select the first 10 values from the <code>description</code> column in <code>reviews</code>, assigning the result to variable <code>first_descriptions</code>.</p>
 <p>Hint: format your output as a pandas Series.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first_descriptions = reviews.description.iloc[:<span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">first_descriptions</span><br></pre></td></tr></table></figure>
 
@@ -255,10 +263,12 @@ Name: 0, Length: 13, dtype: object</code></pre><h2 id="4"><a href="#4" class="he
                            ...
 8    Savory dried thyme notes accent sunnier flavor...
 9    This has great depth of flavor with its fresh ...
-Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions = reviews.description.iloc[:10]<br>Note that many other options will return a valid result, such as desc.head(10) and reviews.loc[:9, “description”].</p>
+Name: description, Length: 10, dtype: object
+</code></pre>
+<p>first_descriptions = reviews.description.iloc[:10]<br>Note that many other options will return a valid result, such as desc.head(10) and reviews.loc[:9, “description”].</p>
 <h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><p>Select the records with index labels <code>1</code>, <code>2</code>, <code>3</code>, <code>5</code>, and <code>8</code>, assigning the result to the variable <code>sample_reviews</code>.</p>
 <p>In other words, generate the following DataFrame:</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://i.imgur.com/sHZvI1O.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://i.imgur.com/sHZvI1O.png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sample_reviews = reviews.iloc[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">sample_reviews</span><br></pre></td></tr></table></figure>
 
 <div>
@@ -267,13 +277,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -379,8 +391,8 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
 </div>
 
 <h2 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h2><p>Create a variable <code>df</code> containing the <code>country</code>, <code>province</code>, <code>region_1</code>, and <code>region_2</code> columns of the records with the index labels <code>0</code>, <code>1</code>, <code>10</code>, and <code>100</code>. In other words, generate the following DataFrame:</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://i.imgur.com/FUCGiKP.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df = reviews.loc[[<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>],[<span class="string">'country'</span>,<span class="string">'province'</span>,<span class="string">'region_1'</span>,<span class="string">'region_2'</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://i.imgur.com/FUCGiKP.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df = reviews.loc[[<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>],[<span class="string">&#x27;country&#x27;</span>,<span class="string">&#x27;province&#x27;</span>,<span class="string">&#x27;region_1&#x27;</span>,<span class="string">&#x27;region_2&#x27;</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">df</span><br></pre></td></tr></table></figure>
 
 <div>
 <style scoped>
@@ -388,13 +400,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -446,7 +460,7 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
 <blockquote>
 <p>This is particularly confusing when the DataFrame index is a simple numerical list, e.g. <code>0,...,1000</code>. In this case <code>df.iloc[0:1000]</code> will return 1000 entries, while <code>df.loc[0:1000]</code> return 1001 of them! To get 1000 elements using <code>loc</code>, you will need to go one lower and ask for <code>df.iloc[0:999]</code>.</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cols = [<span class="string">'country'</span>, <span class="string">'variety'</span>]</span><br><span class="line">df = reviews.loc[:<span class="number">99</span>, cols]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cols = [<span class="string">&#x27;country&#x27;</span>, <span class="string">&#x27;variety&#x27;</span>]</span><br><span class="line">df = reviews.loc[:<span class="number">99</span>, cols]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">df</span><br></pre></td></tr></table></figure>
 
 <div>
 <style scoped>
@@ -454,13 +468,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -508,13 +524,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -555,7 +573,7 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
 </div>
 
 <h2 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h2><p>Create a DataFrame <code>italian_wines</code> containing reviews of wines made in <code>Italy</code>. Hint: <code>reviews.country</code> equals what?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">italian_wines = reviews.loc[reviews.country==<span class="string">'Italy'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">italian_wines</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">italian_wines = reviews.loc[reviews.country==<span class="string">&#x27;Italy&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">italian_wines</span><br></pre></td></tr></table></figure>
 
 <div>
 <style scoped>
@@ -563,13 +581,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -676,7 +696,7 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
 </div>
 
 <h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>Create a DataFrame <code>top_oceania_wines</code> containing all reviews with at least 95 points (out of 100) for wines from Australia or New Zealand.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">top_oceania_wines = reviews.loc[(reviews.points &gt;= <span class="number">95</span>) &amp; ((reviews.country == <span class="string">'Australia'</span>) | (reviews.country == <span class="string">'New Zealand'</span>))]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">top_oceania_wines</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">top_oceania_wines = reviews.loc[(reviews.points &gt;= <span class="number">95</span>) &amp; ((reviews.country == <span class="string">&#x27;Australia&#x27;</span>) | (reviews.country == <span class="string">&#x27;New Zealand&#x27;</span>))]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check your answer</span></span><br><span class="line">top_oceania_wines</span><br></pre></td></tr></table></figure>
 
 <div>
 <style scoped>
@@ -684,13 +704,15 @@ Name: description, Length: 10, dtype: object</code></pre><p>first_descriptions =
         vertical-align: middle;
     }
 
-<pre><code>.dataframe tbody tr th {
+<pre><code>.dataframe tbody tr th &#123;
     vertical-align: top;
-}
+&#125;
 
-.dataframe thead th {
+.dataframe thead th &#123;
     text-align: right;
-}</code></pre><p></style></p>
+&#125;
+</code></pre>
+<p></style></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
