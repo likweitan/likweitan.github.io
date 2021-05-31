@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hyun</title><meta name="description"><meta name="author" content="likweitan"><meta name="copyright" content="likweitan"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://likweitan.github.io/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="msvalidate.01" content="88c6623222814653bc86abd55f2df90b"/><meta property="og:type" content="website"><meta property="og:title" content="Hyun"><meta property="og:url" content="http://likweitan.github.io/"><meta property="og:site_name" content="Hyun"><meta property="og:description"><meta property="og:image" content="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4"><meta property="article:published_time" content="2021-05-31T13:37:06.331Z"><meta property="article:modified_time" content="2021-05-31T13:37:06.331Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-80462825-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-80462825-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"鍵將本頁加入書籤"},"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2021-05-31 21:37:06'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hyun" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="Hyun" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(http://s1.wailian.download/2020/04/20/683017.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Hyun</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Hyun</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/likweitan" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:likweitan@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/60b0d0b4/" title="Apache Pig: Windows Installation 安装">     <img class="post_bg" data-lazy-src="https://images3.alphacoders.com/782/thumb-1920-782991.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Apache Pig: Windows Installation 安装"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/60b0d0b4/" title="Apache Pig: Windows Installation 安装">Apache Pig: Windows Installation 安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-10-14T09:55:00.000Z" title="發表於 2020-10-14 17:55:00">2020-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Big-Data/">Big Data</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Big-Data/Hadoop/">Hadoop</a></span></div><div class="content">Install Pig on Windows</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/55b85722/" title="Hadoop: Windows Installation 安装">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/08/19/eobxggj0jdh51.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hadoop: Windows Installation 安装"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/55b85722/" title="Hadoop: Windows Installation 安装">Hadoop: Windows Installation 安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-08-19T08:32:04.000Z" title="發表於 2020-08-19 16:32:04">2020-08-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Big-Data/">Big Data</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Big-Data/Hadoop/">Hadoop</a></span></div><div class="content">Install Hadoop on Windows</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/aef13551/" title="React: Freecodecamp">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/b6532aa66cec61d49408f37bf0d2a9de5c00f1a9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React: Freecodecamp"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/aef13551/" title="React: Freecodecamp">React: Freecodecamp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-08T02:05:01.000Z" title="發表於 2020-05-08 10:05:01">2020-05-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Front-End-Libraries/">Front End Libraries</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Front-End-Libraries/React/">React</a></span></div><div class="content">Create a Simple JSX Element1const JSX = &lt;h1&gt;Hello JSX!&lt;/h1&gt;;
+
+Create a Complex JSX Element1234567891011const JSX = (  &lt;div&gt;    &lt;h1&gt;Paragraph One&lt;/h1&gt;    &lt;p&gt;Paragraph Two&lt;/p&gt;    &lt;ul&gt;      &lt;li&gt;a&lt;/li&gt;      &lt;li&gt;b&lt;/li&gt;      &lt;li&gt;c&lt;/li&gt;    &lt;/ul&gt;  &lt;/div&gt;);
+
+Add Comments in JSX1234567const JSX = (  &lt;div&gt;    &#123;/* This is a block */&#125;    &lt;h1&gt;This is a block of JSX&lt;/h1&gt;    &lt;p&gt;Here' ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/7117eb09/" title="Python: Lists">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/5da2b6e233bac3f1c68a0ed6c70fb6453bfa0058.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python: Lists"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7117eb09/" title="Python: Lists">Python: Lists</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-07T14:21:38.000Z" title="發表於 2020-05-07 22:21:38">2020-05-07</time></span></div><div class="content">ListsLists in Python represent ordered sequences of values.
+1primes = [2, 3, 5, 7]
+
+Types of things in list
+1planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+
+A list of list
+1234567hands = [    ['J', 'Q', 'K'],    ['2', '2', '2'],    ['6', 'A', 'K'], # (Comma after the last element is optional)]# (I could also have written this on one line, but it can get hard to read)hands = [['J', 'Q', 'K'], ['2', '2', '2'], ['6', 'A', 'K']]
+
+A list can contains differe ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/3cc6066f/" title="Pandas: Index, Select, Assign">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pandas: Index, Select, Assign"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3cc6066f/" title="Pandas: Index, Select, Assign">Pandas: Index, Select, Assign</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-07T09:36:12.000Z" title="發表於 2020-05-07 17:36:12">2020-05-07</time></span></div><div class="content">1234import pandas as pdreviews = pd.read_csv("input/wine-reviews/winemag-data-130k-v2.csv", index_col=0)pd.set_option("display.max_rows", 5)
+
+Look at an overview of your data by running the following line.
+1reviews.head()
+
+
+
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+
+  
+    
+      
+      country
+      description
+      designation
+      points
+      price
+    ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/4337453/" title="Pandas: Create, Read, Write">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/4b0650a81d336f35862fc65e630d90ab8218733a.md.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pandas: Create, Read, Write"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4337453/" title="Pandas: Create, Read, Write">Pandas: Create, Read, Write</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-07T08:16:29.000Z" title="發表於 2020-05-07 16:16:29">2020-05-07</time></span></div><div class="content">Getting StartedTo use pandas, you’ll typically start with the following line of code.要使用 pandas，你通常会从下面这行代码开始。
+1import pandas as pd
+
+CreateThere are two core objects in pandas: the DataFrame and the Series.在 pandas 中，有两个核心对象：DataFrame 和 Series。
+DataFrameA DataFrame is a table. It contains an array of individual entries, each of which has a certain value. Each entry corresponds to a row (or record) and a column.一个 DataFrame 是一个表。它包含一个单独的条目数组，每个条目都有一定的值。每个条目对应于一个行（或记录）和一个列。
+1pd.DataFrame(&#123;'Ye ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/48128415/" title="Python: Booleans and Conditionals">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/931d4f536d097016cce97a03974b9b7781c949ce.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python: Booleans and Conditionals"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/48128415/" title="Python: Booleans and Conditionals">Python: Booleans and Conditionals</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-07T07:25:51.000Z" title="發表於 2020-05-07 15:25:51">2020-05-07</time></span></div><div class="content">BooleansPython has a type bool which can take on one of two values: True and False.
+123x = Trueprint(x)print(type(x))
+
+
+True&lt;class ‘bool’&gt;
+
+Comparison OperationsOperation Description Operation Descriptiona == b a equal to b a != b a not equal to ba &lt; b a less than b a &gt; b a greater than ba &lt;= b a less than or equal to b a &gt;= b a greater than or equal to b
+1234567def can_run_for_president(age):    """Can someone of the given age run for president in the US?"""    # The US Consti ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/c6d61a2c/" title="Python: Functions 功能">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/05/07/ezgif.com-webp-to-jpg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python: Functions 功能"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/c6d61a2c/" title="Python: Functions 功能">Python: Functions 功能</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-07T03:22:15.000Z" title="發表於 2020-05-07 11:22:15">2020-05-07</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/programming/">programming</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/programming/python/">python</a></span></div><div class="content">Getting Help 寻求帮助You saw the abs function in the previous tutorial, but what if you’ve forgotten what it does?你在前面的教程中看到了 abs 函数，但如果你忘记了它的作用怎么办？
+The help() function is possibly the most important Python function you can learn. If you can remember how to use help(), you hold the key to understanding most other function.help()函数可能是你可以学习的最重要的 Python 函数。如果你能记住如何使用 help()，你就掌握了理解大多数其他函数的关键。
+Here is an example:下面是一个例子。
+1help(round)
+
+12345678Help on built-in function round in module builtins:round(...) ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/b5b6b64e/" title="源代码储存">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/ef3ae.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="源代码储存"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/b5b6b64e/" title="源代码储存">源代码储存</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-06T14:52:39.000Z" title="發表於 2020-05-06 22:52:39">2020-05-06</time></span></div><div class="content">git branchHere we can use git’s branching system to work with multiple terminals, so that each time we open a different computer, it’s just a simple configuration and synchronization of files on github, and you can work seamlessly.
+The mechanism is this, since the hexo d uploads deployed to github are actually hexo compiled files that are used to generate web pages and do not contain source files.That is, the upload is automatically generated in .deploy_git in the local directory.
+Other files, i ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/ccc442ff/" title="Python: Hello 你好">     <img class="post_bg" data-lazy-src="http://s1.wailian.download/2020/04/23/56a6884c3a994b4cf3f7a44c6e11a8bc43af759d.jpg2000w_1e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python: Hello 你好"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/ccc442ff/" title="Python: Hello 你好">Python: Hello 你好</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2020-05-06T14:12:31.000Z" title="發表於 2020-05-06 22:12:31">2020-05-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Programming/">Programming</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Programming/Python/">Python</a></span></div><div class="content">IntroductionWe’ll start with a brief overview of Python syntax, variable assignment, and arithmetic operators. If you have previous Python experience, you can skip straight to the hands-on exercise.
+Hello, Python!Python was named for the British comedy troupe Monty Python, so we’ll make our first Python program an homage to their skit about Spam?
+Just for fun, try reading over the code below and predicting what it’s going to do when run. (If you have no idea, that’s fine!)
+Then click the “output ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">likweitan</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">17</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">標籤</div><div class="length_num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分類</div><div class="length_num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/likweitan"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/likweitan" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:likweitan@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">There is only one thing that makes a dream impossible to achieve: the fear of failure.</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/posts/60b0d0b4/" title="Apache Pig: Windows Installation 安装"><img class="aside-post-bg" data-lazy-src="https://images3.alphacoders.com/782/thumb-1920-782991.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Apache Pig: Windows Installation 安装"/></a><div class="aside-post-info"><a class="aside-post-title" href="/posts/60b0d0b4/" title="Apache Pig: Windows Installation 安装">Apache Pig: Windows Installation 安装</a><time class="aside-post_meta post-meta-date" datetime="2020-10-14T09:55:00.000Z" title="發表於 2020-10-14 17:55:00">2020-10-14</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/posts/55b85722/" title="Hadoop: Windows Installation 安装"><img class="aside-post-bg" data-lazy-src="http://s1.wailian.download/2020/08/19/eobxggj0jdh51.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hadoop: Windows Installation 安装"/></a><div class="aside-post-info"><a class="aside-post-title" href="/posts/55b85722/" title="Hadoop: Windows Installation 安装">Hadoop: Windows Installation 安装</a><time class="aside-post_meta post-meta-date" datetime="2020-08-19T08:32:04.000Z" title="發表於 2020-08-19 16:32:04">2020-08-19</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/posts/aef13551/" title="React: Freecodecamp"><img class="aside-post-bg" data-lazy-src="http://s1.wailian.download/2020/04/23/b6532aa66cec61d49408f37bf0d2a9de5c00f1a9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React: Freecodecamp"/></a><div class="aside-post-info"><a class="aside-post-title" href="/posts/aef13551/" title="React: Freecodecamp">React: Freecodecamp</a><time class="aside-post_meta post-meta-date" datetime="2020-05-08T02:05:01.000Z" title="發表於 2020-05-08 10:05:01">2020-05-08</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/posts/7117eb09/" title="Python: Lists"><img class="aside-post-bg" data-lazy-src="http://s1.wailian.download/2020/04/23/5da2b6e233bac3f1c68a0ed6c70fb6453bfa0058.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python: Lists"/></a><div class="aside-post-info"><a class="aside-post-title" href="/posts/7117eb09/" title="Python: Lists">Python: Lists</a><time class="aside-post_meta post-meta-date" datetime="2020-05-07T14:21:38.000Z" title="發表於 2020-05-07 22:21:38">2020-05-07</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/posts/3cc6066f/" title="Pandas: Index, Select, Assign"><img class="aside-post-bg" data-lazy-src="http://s1.wailian.download/2020/04/23/a388741c588b7333aa211a1c214b13b1746f0f4f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pandas: Index, Select, Assign"/></a><div class="aside-post-info"><a class="aside-post-title" href="/posts/3cc6066f/" title="Pandas: Index, Select, Assign">Pandas: Index, Select, Assign</a><time class="aside-post_meta post-meta-date" datetime="2020-05-07T09:36:12.000Z" title="發表於 2020-05-07 17:36:12">2020-05-07</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分類</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Big-Data/"><span class="card-category-list-name">Big Data</span><span class="card-category-list-count">2</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Big-Data/Hadoop/"><span class="card-category-list-name">Hadoop</span><span class="card-category-list-count">2</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Front-End-Libraries/"><span class="card-category-list-name">Front End Libraries</span><span class="card-category-list-count">1</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Front-End-Libraries/React/"><span class="card-category-list-name">React</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Programming/"><span class="card-category-list-name">Programming</span><span class="card-category-list-count">3</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Programming/PHP/"><span class="card-category-list-name">PHP</span><span class="card-category-list-count">2</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories">
+                <span>檢視更多</span><i class="fas fa-angle-right"></i></a></li>           
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>標籤</span></div><div class="card-tag-cloud"><a href="/tags/hadoop/" style="font-size: 19px; color: #99a1ac">hadoop</a> <a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a> <a href="/tags/minecraft/" style="font-size: 16px; color: #999">minecraft</a> <a href="/tags/php/" style="font-size: 22px; color: #99a9bf">php</a> <a href="/tags/python/" style="font-size: 19px; color: #99a1ac">python</a> <a href="/tags/react/" style="font-size: 16px; color: #999">react</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">3</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章數目 :</div><div class="webinfo-article-count">17</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站訪客數 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站總訪問量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(http://s1.wailian.download/2020/04/20/683017.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By likweitan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><div class="js-pjax"><script>function subtitleType () {
+  $.getJSON('https://v1.hitokoto.cn', function (data) {
+    if (true) {
+      var from = '出自 ' + data.from
+      var sub = "".length == 0 ? new Array() : "".split(',')
+      var both = sub.unshift(data.hitokoto, from)
+      var typed = new Typed('#subtitle', {
+        strings: sub,
+        startDelay: 300,
+        typeSpeed: 150,
+        loop: true,
+        backSpeed: 50,
+      })
+    } else {
+      document.getElementById('subtitle').innerHTML = data.hitokoto
+    }
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}
+</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="/js/third-party/click_heart.js" async="async"></script></div></body></html>

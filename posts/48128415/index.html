@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python: Booleans and Conditionals | Hyun</title><meta name="description" content="BooleansPython has a type bool which can take on one of two values: True and False. 123x &#x3D; Trueprint(x)print(type(x))   True&lt;class ‘bool’&gt;  Comparison OperationsOperation Description Operation D"><meta name="author" content="likweitan"><meta name="copyright" content="likweitan"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://likweitan.github.io/posts/48128415/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="msvalidate.01" content="88c6623222814653bc86abd55f2df90b"/><meta property="og:type" content="article"><meta property="og:title" content="Python: Booleans and Conditionals"><meta property="og:url" content="http://likweitan.github.io/posts/48128415/"><meta property="og:site_name" content="Hyun"><meta property="og:description" content="BooleansPython has a type bool which can take on one of two values: True and False. 123x &#x3D; Trueprint(x)print(type(x))   True&lt;class ‘bool’&gt;  Comparison OperationsOperation Description Operation D"><meta property="og:image" content="http://s1.wailian.download/2020/04/23/931d4f536d097016cce97a03974b9b7781c949ce.jpg"><meta property="article:published_time" content="2020-05-07T07:25:51.000Z"><meta property="article:modified_time" content="2021-05-31T13:13:46.722Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-80462825-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-80462825-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"鍵將本頁加入書籤"},"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-05-31 21:13:46'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hyun" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="Hyun" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://avatars0.githubusercontent.com/u/11171910?s=460&amp;u=0227ab8763589288b6d8665662295d019e152c2e&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Booleans"><span class="toc-text">Booleans</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Comparison-Operations"><span class="toc-text">Comparison Operations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conditionals"><span class="toc-text">Conditionals</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Boolean-conversion"><span class="toc-text">Boolean conversion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditional-expressions-aka-%E2%80%98ternary%E2%80%99"><span class="toc-text">Conditional expressions (aka ‘ternary’)</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(http://s1.wailian.download/2020/04/23/931d4f536d097016cce97a03974b9b7781c949ce.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Hyun</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Python: Booleans and Conditionals</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-05-07T07:25:51.000Z" title="發表於 2020-05-07 15:25:51">2020-05-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2021-05-31T13:13:46.722Z" title="更新於 2021-05-31 21:13:46">2021-05-31</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h1><p>Python has a type bool which can take on one of two values: True and False.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="literal">True</span></span><br><span class="line">print(x)</span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>True<br>&lt;class ‘bool’&gt;</p>
+</blockquote>
+<h2 id="Comparison-Operations"><a href="#Comparison-Operations" class="headerlink" title="Comparison Operations"></a>Comparison Operations</h2><p>Operation Description Operation Description<br>a == b a equal to b a != b a not equal to b<br>a &lt; b a less than b a &gt; b a greater than b<br>a &lt;= b a less than or equal to b a &gt;= b a greater than or equal to b</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">can_run_for_president</span><span class="params">(age)</span>:</span></span><br><span class="line">    <span class="string">"""Can someone of the given age run for president in the US?"""</span></span><br><span class="line">    <span class="comment"># The US Constitution says you must "have attained to the Age of thirty-five Years"</span></span><br><span class="line">    <span class="keyword">return</span> age &gt;= <span class="number">35</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"Can a 19-year-old run for president?"</span>, can_run_for_president(<span class="number">19</span>))</span><br><span class="line">print(<span class="string">"Can a 45-year-old run for president?"</span>, can_run_for_president(<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Can a 19-year-old run for president? False<br>Can a 45-year-old run for president? True</p>
+</blockquote>
+<h1 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h1><p>While useful enough in their own right, booleans really start to shine when combined with conditional statements, using the keywords if, elif, and else.</p>
+<p>Conditional statements, often referred to as if-then statements, allow the programmer to execute certain pieces of code depending on some Boolean condition. A basic example of a Python conditional statement is this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inspect</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is zero"</span>)</span><br><span class="line">    <span class="keyword">elif</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is positive"</span>)</span><br><span class="line">    <span class="keyword">elif</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is negative"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(x, <span class="string">"is unlike anything I've ever seen..."</span>)</span><br><span class="line"></span><br><span class="line">inspect(<span class="number">0</span>)</span><br><span class="line">inspect(<span class="number">-15</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>0 is zero<br>-15 is negative</p>
+</blockquote>
+<p>Python adopts the if and else often used in other languages; its more unique keyword is elif, a contraction of “else if”. In these conditional clauses, elif and else blocks are optional; additionally, you can include as many elif statements as you would like.</p>
+<p>Note especially the use of colons (:) and whitespace to denote separate blocks of code. This is similar to what happens when we define a function - the function header ends with :, and the following line is indented with 4 spaces. All subsequent indented lines belong to the body of the function, until we encounter an unindented line, ending the function definition.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">"Only printed when x is positive; x ="</span>, x)</span><br><span class="line">        print(<span class="string">"Also only printed when x is positive; x ="</span>, x)</span><br><span class="line">    print(<span class="string">"Always printed, regardless of x's value; x ="</span>, x)</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>)</span><br><span class="line">f(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Only printed when x is positive; x = 1<br>Also only printed when x is positive; x = 1<br>Always printed, regardless of x’s value; x = 1<br>Always printed, regardless of x’s value; x = 0</p>
+</blockquote>
+<h2 id="Boolean-conversion"><a href="#Boolean-conversion" class="headerlink" title="Boolean conversion"></a>Boolean conversion</h2><p>We’ve seen <code>int()</code>, which turns things into ints, and float(), which turns things into floats, so you might not be surprised to hear that Python has a bool() function which turns things into bools.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(bool(<span class="number">1</span>)) <span class="comment"># all numbers are treated as true, except 0</span></span><br><span class="line">print(bool(<span class="number">0</span>))</span><br><span class="line">print(bool(<span class="string">"asf"</span>)) <span class="comment"># all strings are treated as true, except the empty string ""</span></span><br><span class="line">print(bool(<span class="string">""</span>))</span><br><span class="line"><span class="comment"># Generally empty sequences (strings, lists, and other types we've yet to see like lists and tuples)</span></span><br><span class="line"><span class="comment"># are "falsey" and the rest are "truthy"</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>True<br>False<br>True<br>False</p>
+</blockquote>
+<p>We can use non-boolean objects in if conditions and other places where a boolean would be expected. Python will implicitly treat them as their corresponding boolean value:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">0</span>:</span><br><span class="line">    print(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">"spam"</span>:</span><br><span class="line">    print(<span class="string">"spam"</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>spam</p>
+</blockquote>
+<h2 id="Conditional-expressions-aka-‘ternary’"><a href="#Conditional-expressions-aka-‘ternary’" class="headerlink" title="Conditional expressions (aka ‘ternary’)"></a>Conditional expressions (aka ‘ternary’)</h2><p>Setting a variable to either of two values depending on some condition is a pretty common pattern.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quiz_message</span><span class="params">(grade)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> grade &lt; <span class="number">50</span>:</span><br><span class="line">        outcome = <span class="string">'failed'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        outcome = <span class="string">'passed'</span></span><br><span class="line">    print(<span class="string">'You'</span>, outcome, <span class="string">'the quiz with a grade of'</span>, grade)</span><br><span class="line"></span><br><span class="line">quiz_message(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>You passed the quiz with a grade of 80</p>
+</blockquote>
+<p>Python has a handy single-line ‘conditional expression’ syntax to simplify these cases:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quiz_message</span><span class="params">(grade)</span>:</span></span><br><span class="line">    outcome = <span class="string">'failed'</span> <span class="keyword">if</span> grade &lt; <span class="number">50</span> <span class="keyword">else</span> <span class="string">'passed'</span></span><br><span class="line">    print(<span class="string">'You'</span>, outcome, <span class="string">'the quiz with a grade of'</span>, grade)</span><br><span class="line"></span><br><span class="line">quiz_message(<span class="number">45</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>You failed the quiz with a grade of 45</p>
+</blockquote>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">likweitan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="http://likweitan.github.io/posts/48128415/">http://likweitan.github.io/posts/48128415/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://likweitan.github.io" target="_blank">Hyun</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="http://s1.wailian.download/2020/04/23/931d4f536d097016cce97a03974b9b7781c949ce.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4337453/"><img class="prev-cover" data-lazy-src="http://s1.wailian.download/2020/04/23/4b0650a81d336f35862fc65e630d90ab8218733a.md.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Pandas: Create, Read, Write</div></div></a></div><div class="next-post pull-right"><a href="/posts/c6d61a2c/"><img class="next-cover" data-lazy-src="http://s1.wailian.download/2020/05/07/ezgif.com-webp-to-jpg.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python: Functions 功能</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 評論</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></article></main><footer id="footer" style="background-image: url(http://s1.wailian.download/2020/04/23/931d4f536d097016cce97a03974b9b7781c949ce.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By likweitan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="放大字型"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="縮小字型"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    window.valine = new Valine({
+      el: '#vcomment',
+      appId: 'oiv2iGbMVuEfdMfR84cXfddN-MdYXbMMI',
+      appKey: 'd77UxNuFxKhqpEJAHSQLD3rQ',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: true,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    });
+    if ('nick,mail') { valine.config.requiredFields= 'nick,mail'.split(',') }
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="/js/third-party/click_heart.js" async="async"></script></div></body></html>
