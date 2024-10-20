@@ -14,8 +14,8 @@ params:
   defaultTheme: auto # to switch between dark or light according to browser theme
   disableThemeToggle: true
   homeInfoParams:
-    Title: "Welcome"
-    Content: 忻
+    Title: "忻"
+    Content: "Everything"
 
   socialIcons: # optional
     - name: "Github"
