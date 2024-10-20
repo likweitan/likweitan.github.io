@@ -1,0 +1,74 @@
+baseURL: https://likweitan.github.io/
+languageCode: en-us
+title: likweitan
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+params:
+  # defaultTheme: light
+  # defaultTheme: dark
+  defaultTheme: auto # to switch between dark or light according to browser theme
+  disableThemeToggle: true
+  # homeInfoParams:
+  #   Title: "Hi there \U0001F44B"
+  #   Content: Welcome to my blog
+
+  socialIcons: # optional
+    - name: "Github"
+      url: "https://github.com/likweitan"
+    - name: "Instagram"
+      url: "https://instagram.com/likweitan"
+  ShowReadingTime: true
+  ShowToc: false
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  comments: true
+
+
+  profileMode:
+    enabled: true
+    title: "Lik Wei's Blog" # optional default will be site title
+    subtitle: "Empowering Solutions"
+    imageUrl: "https://avatars.githubusercontent.com/u/11171910?v=4" # optional
+    # imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      # - name: Archive
+      #   url: "/archive"
+      - name: Posts
+        url: "/posts"
+      # - name: Github
+      #   url: "https://github.com/"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 20
+    - identifier: likweitan
+      name: likweitan.eu.org
+      url: https://likweitan.eu.org
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
