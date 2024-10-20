@@ -20,8 +20,8 @@ params:
   socialIcons: # optional
     - name: "Github"
       url: "https://github.com/likweitan"
-    - name: "Instagram"
-      url: "https://instagram.com/likweitan"
+    # - name: "Instagram"
+    #   url: "https://instagram.com/likweitan"
   ShowReadingTime: true
   ShowToc: false
   ShowPostNavLinks: true
@@ -40,8 +40,8 @@ params:
     buttons:
       # - name: Archive
       #   url: "/archive"
-      - name: Posts
-        url: "/posts"
+      # - name: Posts
+      #   url: "/posts"
       # - name: Github
       #   url: "https://github.com/"
 
@@ -59,10 +59,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
-    # - identifier: tags
-    #   name: Tags
-    #   url: /tags/
-    #   weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
     - identifier: likweitan
       name: likweitan.eu.org
       url: https://likweitan.eu.org

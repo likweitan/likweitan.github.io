@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Minecraft on likweitan</title>
+    <link>http://localhost:1313/tags/minecraft/</link>
+    <description>Recent content in Minecraft on likweitan</description>
+    <generator>Hugo -- 0.136.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Feb 2020 21:45:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/minecraft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to host a Minecraft server</title>
+      <link>http://localhost:1313/posts/minecraft-server/</link>
+      <pubDate>Mon, 17 Feb 2020 21:45:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/minecraft-server/</guid>
+      <description>&lt;h1 id=&#34;verify-that-the-latest-version-of-java-is-installed-java&#34;&gt;Verify that the latest version of Java is installed Java&lt;/h1&gt;
+&lt;p&gt;Open a command window and enter the command java -version. If a version number is reported, then check the Java website to see what the most recent version number is.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:&amp;gt; java -version
+java version &amp;#34;1.8.0_241&amp;#34;
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;If Java isn&amp;rsquo;t installed or the version is outdated, download it from &lt;a href=&#34;http://www.java.com/download/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

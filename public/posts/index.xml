@@ -28,5 +28,19 @@ Apache Pig is a platform build on the top of Hadoop. You can refer to our previo
 &lt;p&gt;Download the &lt;a href=&#34;https://downloads.apache.org/pig/&#34;&gt;Apache Pig&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;After the file is downloaded, we should extract it twice using &lt;strong&gt;7zip&lt;/strong&gt; (using 7zip: the first time we extract the .tar.gz file, the second time we extract the .tar file). We will extract the Pig folder into &lt;code&gt;C:\hadoop-env&lt;/code&gt; directory as used in the previous articles. Or you could use &lt;strong&gt;winzip&lt;/strong&gt; to extract it.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>How to host a Minecraft server</title>
+      <link>http://localhost:1313/posts/minecraft-server/</link>
+      <pubDate>Mon, 17 Feb 2020 21:45:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/minecraft-server/</guid>
+      <description>&lt;h1 id=&#34;verify-that-the-latest-version-of-java-is-installed-java&#34;&gt;Verify that the latest version of Java is installed Java&lt;/h1&gt;
+&lt;p&gt;Open a command window and enter the command java -version. If a version number is reported, then check the Java website to see what the most recent version number is.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:&amp;gt; java -version
+java version &amp;#34;1.8.0_241&amp;#34;
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;If Java isn&amp;rsquo;t installed or the version is outdated, download it from &lt;a href=&#34;http://www.java.com/download/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
