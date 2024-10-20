@@ -61,10 +61,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 20
     - identifier: likweitan
       name: likweitan.eu.org
       url: https://likweitan.eu.org
