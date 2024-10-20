@@ -14,8 +14,8 @@ params:
   defaultTheme: auto # to switch between dark or light according to browser theme
   disableThemeToggle: true
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Everything is null.
+    Title: "Welcome"
+    Content: 忻
 
   socialIcons: # optional
     - name: "Github"

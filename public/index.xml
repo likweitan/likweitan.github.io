@@ -6,28 +6,8 @@
     <description>Recent content on likweitan</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Oct 2024 20:00:32 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2024 17:42:50 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Queueing System Simulation</title>
-      <link>http://localhost:1313/posts/queueing-system-simulation/</link>
-      <pubDate>Sun, 20 Oct 2024 20:00:32 +0800</pubDate>
-      <guid>http://localhost:1313/posts/queueing-system-simulation/</guid>
-      <description>&lt;h1 id=&#34;grocery-stores&#34;&gt;Grocery Stores&lt;/h1&gt;
-&lt;h2 id=&#34;simulation-of-queueing-systems&#34;&gt;Simulation of Queueing Systems&lt;/h2&gt;
-&lt;p&gt;A queueing system is characterized by the following elements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Calling Population: Potential customers who may enter the system.&lt;/li&gt;
-&lt;li&gt;Arrival Rate: Frequency of customer arrivals (inter-arrival times).&lt;/li&gt;
-&lt;li&gt;Service Mechanism: How services are provided (number of servers and speed).&lt;/li&gt;
-&lt;li&gt;System Capacity: Maximum number of customers allowed in the system.&lt;/li&gt;
-&lt;li&gt;Queueing Discipline: Order in which customers are served (e.g., FIFO - First In, First Out).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Analysis of a small grocery store&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Apache Hadoop</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
