@@ -158,12 +158,12 @@ mathjax:
 
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
-  enabled: false
-  shortname: cactus-1
+  enabled: true
+  shortname: likweitan-github-io
 
 # Fill in your Utterances data to enable Utterances comments
 utterances:
-  enabled: true
+  enabled: false
   repo: likweitan/likweitan.github.io
   issue_term: pathname
   label: Comment
