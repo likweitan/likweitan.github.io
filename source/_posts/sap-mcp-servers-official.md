@@ -11,7 +11,7 @@ If you're new to the Model Context Protocol (MCP), I highly recommend reading th
 
 ![Model Context Protocol Diagram](https://mintcdn.com/mcp/bEUxYpZqie0DsluH/images/mcp-simple-diagram.png?fit=max&auto=format&n=bEUxYpZqie0DsluH&q=85&s=35268aa0ad50b8c385913810e7604550)
 
-Recognizing this potential, SAP has released several official MCP servers designed to supercharge AI-assisted development for the SAP ecosystem.
+Recognizing this potential, SAP has released several official MCP servers designed to supercharge AI-assisted development for the SAP ecosystem, specifically tailored to the developer's perspective.
 
 # SAP
 
