@@ -5,16 +5,16 @@
 # Site
 title: Lik Wei Tan
 subtitle: "subtitle"
-description: "The best thing you can do is learn from those mistakes so that you continue to get better."
+description: "The biggest risk is not taking any risk."
 keywords:
 author: Lik Wei Tan
 language: en
-timezone: ""
+timezone: "ASIA/KUALA_LUMPUR"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://likweita.github.io
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks

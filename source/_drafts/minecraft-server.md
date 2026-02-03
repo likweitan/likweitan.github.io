@@ -1,7 +1,7 @@
 ---
 date: "2020-02-17T21:45:24+08:00"
 draft: false
-title: "How to host a Minecraft server"
+title: "Minecraft Server Hosting Guide"
 tags:
   - minecraft
 ---

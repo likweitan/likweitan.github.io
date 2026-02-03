@@ -48,7 +48,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 5
+  post_count: 4
   sort_updated: false
 
 # Customize the archive view.
@@ -63,7 +63,7 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_updated: true
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
