@@ -13,6 +13,8 @@ description: "A comprehensive guide to official SAP Model Context Protocol (MCP)
 
 A Model Context Protocol (MCP) server for the SAP Cloud Application Programming Model (CAP). Use it for AI-assisted development of CAP applications (agentic coding).
 
+> For the best experience we recommend using this server alongside @ui5/mcp-server and @sap-ux/fiori-mcp-server.
+
 ### Usage
 
 - Which CDS services are in this project, and where are they served?
@@ -214,6 +216,8 @@ The UI5 Model Context Protocol server offers tools to improve the developer expe
 - Helps with the creation of new UI5 projects
 - Detects and fixes UI5-specific errors in the code
 - Provides additional UI5-specific information
+
+> > For the best experience we recommend using this server alongside @cap-js/mcp-server and @sap-ux/fiori-mcp-server.
 
 ### Usage
 
