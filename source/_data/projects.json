@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ABAP Skills",
+    "url": "https://github.com/likweitan/abap-skills",
+    "desc": "A skill for ABAP"
+  },
+  {
+    "name": "Project Kernseife",
+    "url": "https://github.com/SAP/project-kernseife",
+    "desc": "A custom ATC Check for ABAP systems that enables you to flexible score the usage of SAP objects in your system"
+  },
+  {
+    "name": "Identivia",
+    "url": "https://github.com/identivia",
+    "desc": "A KYC platform for identity verification and fraud prevention"
+  }
+]
