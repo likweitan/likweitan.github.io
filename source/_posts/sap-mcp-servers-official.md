@@ -1,7 +1,7 @@
 ---
 date: 2026-02-03 21:26:31
 draft: false
-title: "SAP's MCP Servers - Official"
+title: "SAP's Official MCP Servers"
 tags: [SAP, MCP, AI, CAP, Fiori, ABAP]
 categories: [Technology]
 description: "A comprehensive guide to official SAP Model Context Protocol (MCP) servers and the ABAP Accelerator for Amazon Q, illustrating how to configure them for AI-assisted development."
