@@ -223,7 +223,7 @@ The UI5 Model Context Protocol server offers tools to improve the developer expe
 - Detects and fixes UI5-specific errors in the code
 - Provides additional UI5-specific information
 
-> > For the best experience we recommend using this server alongside @cap-js/mcp-server and @sap-ux/fiori-mcp-server.
+> For the best experience we recommend using this server alongside @cap-js/mcp-server and @sap-ux/fiori-mcp-server.
 
 ### Usage
 
