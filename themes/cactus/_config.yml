@@ -186,9 +186,9 @@ cloudflare_analytics:
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
-  enabled: false
-  id: e77e68be-f6e4-4br3-9365-2b76b57cd571
-  host: https://analytics.domain.com
+  enabled: true
+  id: 7fe7401d-0ebc-4d85-b9b3-01e98b010ee6
+  host: https://analytics.likweitan.eu.org
   script_name: umami.js
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
