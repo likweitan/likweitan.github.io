@@ -189,7 +189,7 @@ umami_analytics:
   enabled: true
   id: 7fe7401d-0ebc-4d85-b9b3-01e98b010ee6
   host: https://analytics.likweitan.eu.org
-  script_name: umami.js
+  script_name: script.js
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
