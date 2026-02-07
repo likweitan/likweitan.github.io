@@ -97,7 +97,7 @@ logo:
   width: 50
   height: 50
   url: /images/logo.png
-  gravatar: false
+  gravatar: true
   grayout: true
 
 # Customize the favicons.
@@ -186,7 +186,7 @@ cloudflare_analytics:
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
-  enabled: true
+  enabled: f
   id: 7fe7401d-0ebc-4d85-b9b3-01e98b010ee6
   host: https://analytics.likweitan.eu.org
   script_name: script.js
@@ -195,8 +195,8 @@ umami_analytics:
 # logo and/or favicons of you website.
 # To generate hash: `$ echo -n "name@email.com" | md5`.
 gravatar:
-  email: name@email.com
-  hash: d41d8cd98f00b204e9800998ecf8427e
+  email: likweitan@gmail.com
+  hash: 0b5ecaf2047183e398c6a23a0dcc0ac0
 
 # loads libraries and styles from CDN instead or relying on local files
 cdn:
