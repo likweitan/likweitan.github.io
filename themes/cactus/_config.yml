@@ -181,12 +181,12 @@ baidu_analytics:
 
 # Fill in your Cloudflare Analytics tracking ID to enable Cloudflare Analytics.
 cloudflare_analytics:
-  enabled: false
-  id: 0dabb6e21848405483a237e6a7b6ed04
+  enabled: true
+  id: 3319849c4479459688106d46d360b422
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
-  enabled: f
+  enabled: true
   id: 7fe7401d-0ebc-4d85-b9b3-01e98b010ee6
   host: https://analytics.likweitan.eu.org
   script_name: script.js
