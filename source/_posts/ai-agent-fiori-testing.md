@@ -4,12 +4,13 @@ date: 2026-02-12 00:02:00
 tags:
 ---
 
-This time let me show you how I automated my unit testing with documentation and screenshots. Objective is to read the functional specification and execute the test cases. In the functional specification, there is test cases that required to be tested and created in a docx format.
+In this post, I'll demonstrate how to **automate unit testing for SAP Fiori applications** using an AI agent. The goal is simple: an agent reads a functional specification (Word document), extracts the test cases, executes them against a live system, and generates a comprehensive test report with screenshots.
 
-Tools needed:
-✅ Any AI Agent
-✅ MCP: [mcp-abap-adt](https://github.com/mario-andreschak/mcp-abap-adt)
-✅ Agent Skills: [abap-skills](https://github.com/likweitan/abap-skills)
+### Tools Required
+
+- ✅ **AI Agent**: Claude Code (or similar)
+- ✅ **MCP Server**: [mcp-abap-adt](https://github.com/mario-andreschak/mcp-abap-adt) for ABAP connectivity
+- ✅ **Agent Skills**: [abap-skills](https://github.com/likweitan/abap-skills) for specialized SAP tasks
 
 ## Step 1: Install Claude Code
 
@@ -51,7 +52,7 @@ Playwright MCP enables browser automation capabilities, allowing Claude to inter
 
 {% asset_img install_anthropic_skills.png %}
 
-## Step 3: Install ABAP Skills
+## Step 4: Install ABAP Skills
 
 ABAP Skills provides specialized capabilities for SAP development, including ADT (ABAP Development Tools) integration through the MCP protocol.
 
@@ -76,7 +77,7 @@ ABAP Skills provides specialized capabilities for SAP development, including ADT
 
 4. **Copy the skills folder** from the cloned repository to your `.claude/skills` directory for enhanced ABAP capabilities.
 
-## Step 4: Add CLAUDE.md
+## Step 5: Add CLAUDE.md
 
 The `CLAUDE.md` file contains project-specific instructions that guide Claude's behavior. Create this file in your project root to define your testing workflow.
 
@@ -131,22 +132,50 @@ The `CLAUDE.md` file contains project-specific instructions that guide Claude's 
   Adjust the skill names (sap-fiori-apps-reference, webapp-testing, docx) to match whatever is actually registered in your environment.
 ```
 
-## What is Agent Skills? 
+## Understanding Agent Skills
 
-Skills basically is a series of instruction or rules that is repetitive check more on https://code.claude.com/docs/en/skills.
+Agent Skills are essentially reusable packages of instructions or tools that extend the agent's capabilities. They handle repetitive tasks or domain-specific logic. You can explore more skills at [Claude Code Skills](https://code.claude.com/docs/en/skills).
 
-The main 2 skills I use are:
+### Key Skills Used
 
-sap-fiori-apps-reference
-docx
+**1. sap-fiori-apps-reference**
+Resolves Fiori App IDs to technical details like OData services and URL paths.
 
-The functional specification is generated from Claude.
-
-{% pdf /FS_Create_Maintenance_Request.pdf %}
+**2. docx**
+Reads and writes Microsoft Word documents, essential for parsing specs and generating reports.
 
 ### Business Requirement
 
 When a user initiates the creation of a maintenance request (notification type Y1), the system must enforce that the Technical Object field is mandatory. This ensures every Y1 maintenance request is linked to a valid technical object for proper asset tracking and maintenance planning.
 
+{% pdf /FS_Create_Maintenance_Request.pdf %}
+
+## Demo Walkthrough
+
+### 1. Initialization
+We begin in the terminal using Claude Code. After clearing the workspace, we initialize the Model Context Protocol (MCP) to connect our local Playwright environment. We verify the active skills, ensuring the agent has the necessary tools to navigate the file system and execute browser-based tasks.
+
+### 2. Analysis
+The agent reads the functional specification `DFS_Create_Maintenance_Request.docx` to extract test cases. It identifies the target application—App ID **F1511A**—and determines the necessary SAP credentials and environment URLs. It then cross-references the AppId with local metadata to ensure the paths are correct.
+
+### 3. Execution
+
+#### Authentication
+The agent prompts for the SAP client, language, and Fiori Launchpad URL. Once provided, Claude uses Playwright to launch a headless browser, navigates to the login screen, enters the credentials, and successfully authenticates into the SAP S/4HANA 2023 sandbox.
+
+#### Test Case 001: Positive Validation
+The first test verifies that the 'Technical Object' field becomes mandatory when notification type 'Y1' is selected. The agent:
+1. Navigates to the 'Create Maintenance Request' app.
+2. Selects 'Y1'.
+3. Intentionally leaves 'Technical Object' blank to trigger a validation error.
+4. Confirms the system blocks the save.
+5. Enters a valid object to complete the request.
+The notification is successfully created, and screenshots are captured at every step.
+
+#### Test Case 002: Negative Validation & Defect Discovery
+Next, we move to TC-MR-002. This is a negative test to ensure the 'Technical Object' field remains optional for other notification types, like 'M1'. However, during execution, the agent discovers a UI inconsistency: **while the field should be optional, the server-side validation is still throwing a mandatory error.** Claude identifies this as a 'Fail' and notes the discrepancy between the visual indicators and the system behavior.
+
+### 4. Results & Reporting
+With the execution complete, Claude provides a high-level summary: one 'Pass' and one 'Fail'. The agent highlights the defect found in Case 002. Finally, it compiles these results into a professional Test Results Report, including an executive summary, detailed steps, and automated screenshots.
 
 {% pdf /test.pdf %}
