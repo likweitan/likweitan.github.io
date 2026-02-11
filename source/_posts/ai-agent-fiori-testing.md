@@ -1,7 +1,9 @@
 ---
 title: Automated Fiori Unit Testing
 date: 2026-02-12 00:02:00
-tags:
+tags: [SAP, MCP, AI, Fiori]
+categories: [Technology]
+description: "A comprehensive guide to automate unit testing for SAP Fiori applications using an AI agent. The goal is simple: an agent reads a functional specification (Word document), extracts the test cases, executes them against a live system, and generates a comprehensive test report with screenshots."
 ---
 
 In this post, I'll demonstrate how to **automate unit testing for SAP Fiori applications** using an AI agent. The goal is simple: an agent reads a functional specification (Word document), extracts the test cases, executes them against a live system, and generates a comprehensive test report with screenshots.
