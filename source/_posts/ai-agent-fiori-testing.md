@@ -152,6 +152,8 @@ When a user initiates the creation of a maintenance request (notification type Y
 
 {% pdf /FS_Create_Maintenance_Request.pdf %}
 
+[Download Functional Specification](/FS_Create_Maintenance_Request.pdf)
+
 ## Demo Walkthrough
 
 ### 1. Initialization
@@ -181,3 +183,5 @@ Next, we move to TC-MR-002. This is a negative test to ensure the 'Technical Obj
 With the execution complete, Claude provides a high-level summary: one 'Pass' and one 'Fail'. The agent highlights the defect found in Case 002. Finally, it compiles these results into a professional Test Results Report, including an executive summary, detailed steps, and automated screenshots.
 
 {% pdf /test.pdf %}
+
+[Download Test Results Report](/test.pdf)
