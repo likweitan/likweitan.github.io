@@ -11,7 +11,7 @@ In this post, I'll demonstrate how to **automate unit testing for SAP Fiori appl
 ### Tools Required
 
 - ✅ **AI Agent**: Claude Code (or similar)
-- ✅ **MCP Server**: [mcp-abap-adt](https://github.com/mario-andreschak/mcp-abap-adt) for ABAP connectivity
+- ✅ **MCP Server**: [playwright](https://github.com/microsoft/playwright-mcp) for browser automation
 - ✅ **Agent Skills**: [abap-skills](https://github.com/likweitan/abap-skills) for specialized SAP tasks
 
 ## Step 1: Install Claude Code
@@ -62,22 +62,6 @@ ABAP Skills provides specialized capabilities for SAP development, including ADT
    ```bash
    git clone https://github.com/likweitan/abap-skills.git ./.claude
    ```
-
-2. **Add ABAP ADT MCP** to your Claude Code configuration in `~/.claude/claude_desktop_config.json`:
-   ```json
-   {
-     "mcpServers": {
-       "mcp-abap-adt": {
-         "command": "npx",
-         "args": ["-y", "mcp-abap-adt"]
-       }
-     }
-   }
-   ```
-
-3. **Configure your SAP connection** by setting environment variables or using the MCP's configuration prompts.
-
-4. **Copy the skills folder** from the cloned repository to your `.claude/skills` directory for enhanced ABAP capabilities.
 
 ## Step 5: Add CLAUDE.md
 
