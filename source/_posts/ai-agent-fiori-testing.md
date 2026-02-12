@@ -160,7 +160,7 @@ When a user initiates the creation of a maintenance request (notification type Y
 We begin in the terminal using Claude Code. After clearing the workspace, we initialize the Model Context Protocol (MCP) to connect our local Playwright environment. We verify the active skills, ensuring the agent has the necessary tools to navigate the file system and execute browser-based tasks.
 
 ### 2. Analysis
-The agent reads the functional specification `DFS_Create_Maintenance_Request.docx` to extract test cases. It identifies the target application—App ID **F1511A**—and determines the necessary SAP credentials and environment URLs. It then cross-references the AppId with local metadata to ensure the paths are correct.
+The agent reads the functional specification `FS_Create_Maintenance_Request.docx` to extract test cases. It identifies the target application—App ID **F1511A**—and determines the necessary SAP credentials and environment URLs. It then cross-references the AppId with local metadata to ensure the paths are correct.
 
 ### 3. Execution
 
