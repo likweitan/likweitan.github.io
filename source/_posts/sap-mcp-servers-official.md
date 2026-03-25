@@ -319,6 +319,90 @@ Add this to your Cursor configuration file. See [Cursor MCP docs](https://docs.c
 
 [GitHub](https://github.com/UI5/mcp-server) [NPM](https://www.npmjs.com/package/@ui5/mcp-server)
 
+## UI5 Web Components
+
+The UI5 Web Components MCP server provides AI assistants with access to UI5 Web Components API documentation, framework integration guides, and theming documentation. It enables AI-assisted development with UI5 Web Components across React, Angular, Vue, and vanilla JavaScript.
+
+### Usage
+
+- Show me the API for ui5-button
+- How do I use UI5 Web Components with React?
+- Show me the available documentation
+- Get the theming documentation
+
+### Installation
+
+<details>
+<summary><b>Claude Code</b></summary>
+
+Run this command to add the server. See [Claude Code MCP docs](https://docs.anthropic.com/en/docs/claude-code/mcp) for more info.
+
+**Local Server Connection**
+
+```bash
+claude mcp add webcomponents-mcp -- npx -y @ui5/webcomponents-mcp-server
+```
+</details>
+<details>
+<summary><b>VS Code</b></summary>
+
+Add this to your VS Code MCP config file. See [VS Code MCP docs](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) for more info.
+
+**Local Server Connection**
+
+```json
+{
+  "mcpServers": {
+    "@ui5/webcomponents-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@ui5/webcomponents-mcp-server"]
+    }
+  }
+}
+```
+</details>
+<details>
+<summary><b>OpenCode</b></summary>
+
+Add this to your OpenCode configuration file. See [OpenCode MCP docs](https://opencode.ai/docs/mcp-servers) for more info.
+
+**Local Server Connection**
+
+```json
+{
+  "mcp": {
+    "@ui5/webcomponents-mcp-server": {
+      "type": "local",
+      "command": ["npx", "-y", "@ui5/webcomponents-mcp-server"],
+      "enabled": true
+    }
+  }
+}
+```
+</details>
+<details>
+<summary><b>Cursor</b></summary>
+
+Add this to your Cursor configuration file. See [Cursor MCP docs](https://docs.cursor.com/context/model-context-protocol#installing-mcp-servers) for more info.
+
+**Local Server Connection**
+
+```json
+{
+  "mcpServers": {
+    "@ui5/webcomponents-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@ui5/webcomponents-mcp-server"]
+    }
+  }
+}
+```
+</details>
+
+[GitHub](https://github.com/UI5/webcomponents-mcp-server) [NPM](https://www.npmjs.com/package/@ui5/webcomponents-mcp-server)
+
 ## SAP Mobile development Kit (MDK)
 
 This open-source server provides AI agents with comprehensive MDK knowledge and tools. By combining best practice guidelines, project-aware context information, templates for creating new projects, and access to the MDK CLI tools, the MDK MCP server transforms AI agents into MDK development experts.
