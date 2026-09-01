@@ -5,8 +5,6 @@ tags: [SAP, AI, BTP]
 categories: [Technology]
 ---
 
-# Adding Skill to the SAP AI Skills Library
-
 If you've been building "skills" for AI coding agents — the kind of reusable `SKILL.md` instructions that Claude Code, Copilot, Cursor, and similar tools can pick up — there's now a central place to make them discoverable to the SAP community: [SAP/ai-skills-library](https://github.com/SAP/ai-skills-library), which powers the public catalog at [skills.cloud.sap](https://skills.cloud.sap).
 
 {% asset_img sap-ai-skills.png "SAP AI Skills Library page in VS Code marketplace" %}
